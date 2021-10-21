@@ -11,13 +11,10 @@ private:
 std::string		_name;
 int				_grade;
 public:
-	Bureaucrat(const std::string Name, int garde);
+	Bureaucrat(const std::string Name, int grade);
 	Bureaucrat(const Bureaucrat& copy);
 	~Bureaucrat();
-	std::string	getName(void);
-	int			getGrade(void);
-	void		lessGrade(void);
-	void		moreGrade(void);
+	void	signForm(void);
 	class GradeTooHighException : public std::exception{
 		public:
 		GradeTooHighException();

@@ -1,10 +1,10 @@
-NAME = Bureaucrat
+NAME = Interface
 
-SRCS = main.cpp Bureaucrat.cpp
+SRCS = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
-INC = Bureaucrat.hpp
+INC = AMateria.hpp Character.hpp Cure.hpp Ice.hpp ICharacter.hpp IMateriaSource.hpp MateriaSource.hpp
 
 CXX  = clang++
 
@@ -12,7 +12,7 @@ RM  = rm -f
 
 INC_CMP = $(addprefix -I, $(INC))
 
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror
 
 all:			$(NAME)
 

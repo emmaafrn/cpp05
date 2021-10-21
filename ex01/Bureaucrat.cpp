@@ -24,24 +24,6 @@ Bureaucrat::~Bureaucrat(){
 	
 }
 
-std::string	Bureaucrat::getName(){
-	return (_name);
-}
-
-int			Bureaucrat::getGrade(){
-	return (_grade);
-}
-
-void		Bureaucrat::moreGrade(){
-	if (_grade > INT_MIN)
-		_grade--;
-}
-
-void		Bureaucrat::lessGrade(){
-	if (_grade < INT_MAX)
-		_grade++;
-}
-
 Bureaucrat::GradeTooLowException::GradeTooLowException(){
 	std::cout << "Error, grade too low for bureaucrat" << std::endl;
 }
