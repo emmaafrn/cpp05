@@ -1,10 +1,10 @@
-NAME = Interface
+NAME = Bureaucrat
 
-SRCS = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
+SRCS = Bureaucrat.cpp Form.cpp main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
-INC = AMateria.hpp Character.hpp Cure.hpp Ice.hpp ICharacter.hpp IMateriaSource.hpp MateriaSource.hpp
+INC = Bureaucrat.hpp Form.hpp
 
 CXX  = clang++
 

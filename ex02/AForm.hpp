@@ -11,17 +11,18 @@ class Form{
 private:
 std::string	_name;
 bool		_signed;
-int			_s_grade;
-int			_exec_grade;
+const int	_s_grade;
+const int	_exec_grade;
 public:
-	Form(int s_core, int e_grade, std::string name);
+	Form(const int s_core, const int e_grade, std::string name);
 	Form(const Form& copy);
 	~Form();
-	std::string		getName(void);
-	int				getSignGrade(void);
-	int				getExecGrade(void);
-	bool			getStatus(void);
+	std::string		getName(void) const;
+	int		getSignGrade(void) const;
+	int		getExecGrade(void) const;
+	bool			getStatus(void) const;
 	void			beSigned(Bureaucrat& bureaucrat);
+	virtual void	execute (Bureaucrat const & executor) const = 0;
 	class GradeTooHighException : public std::exception{
 		public :
 		GradeTooHighException();

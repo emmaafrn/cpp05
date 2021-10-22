@@ -1,15 +1,14 @@
-#include "Form.hpp"
+#include "AForm.hpp"
 
-Form::Form(int s_grade, int e_grade, std::string name){
-	_s_grade = s_grade;
-	_exec_grade = e_grade;
+Form::Form(const int s_grade, const int e_grade, std::string name) : _s_grade(s_grade), _exec_grade(e_grade){
 	_name = name;
 	_signed = 0;
 	std::cout << *this;
 }
 
-Form::Form(const Form& copy){
-	*this = copy;
+Form::Form(const Form& copy): _s_grade(copy._s_grade), _exec_grade(copy._exec_grade){
+	_name = copy._name;
+	_signed = copy._signed;
 }
 
 Form::~Form(){
@@ -32,24 +31,23 @@ Form::GradeTooLowException::~GradeTooLowException() throw(){
 	
 }
 
-std::string	Form::getName(void){
+std::string	Form::getName(void) const{
 	return (_name);
 }
 
-int		Form::getExecGrade(void){
+int		Form::getExecGrade(void) const{
 	return (_exec_grade);
 }
 
-int		Form::getSignGrade(void){
+int		Form::getSignGrade(void) const{
 	return (_s_grade);
 }
 
-bool	Form::getStatus(void){
+bool	Form::getStatus(void) const{
 	return (_signed);
 }
 
 void	Form::beSigned(Bureaucrat& bureaucrat){
-
 	if (bureaucrat.getGrade() <= _s_grade){
 		_signed = 1;
 		bureaucrat.signForm(*this);
@@ -62,6 +60,6 @@ void	Form::beSigned(Bureaucrat& bureaucrat){
 }
 
 std::ostream	&operator<<(std::ostream& lhs, Form& rhs){
-	lhs << rhs.getName() << ",Form of minimal grade to sign : " << rhs.getSignGrade() << " and minimal grade to execute : " << rhs.getExecGrade() << std::endl;
+	lhs << rhs.getName() << ", Form of minimal grade to sign : " << rhs.getSignGrade() << " and minimal grade to execute : " << rhs.getExecGrade() << std::endl;
 	return (lhs);
 }
