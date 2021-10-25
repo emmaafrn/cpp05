@@ -10,7 +10,7 @@ CXX  = clang++
 
 RM  = rm -f
 
-INC_CMP = $(addprefix -I, $(INC))
+INC_CMP = -I .
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 

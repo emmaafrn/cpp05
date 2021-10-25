@@ -70,6 +70,7 @@ void	Bureaucrat::signForm(Form& form){
 }
 
 std::ostream	&operator<<(std::ostream &lhs, Bureaucrat &rhs){
-	lhs << rhs.getName() << ", Bureaucrat grade " << rhs.getGrade() << std::endl;
+	lhs << "Bureaucrat " << rhs.getName() << " of grade " << rhs.getGrade() << std::endl;
 	return (lhs);
 }
+

@@ -1,4 +1,4 @@
-NAME = Bureaucrat
+NAME = Form
 
 SRCS = Bureaucrat.cpp Form.cpp main.cpp
 
@@ -10,7 +10,7 @@ CXX  = clang++
 
 RM  = rm -f
 
-INC_CMP = $(addprefix -I, $(INC))
+INC_CMP = -I .
 
 CXXFLAGS = -Wall -Wextra -Werror
 

@@ -65,3 +65,8 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const{
 	file <<"                              z        z "<< std::endl;
 	file <<"                              z.,ze.$$$z "<< std::endl;
 }
+
+std::ostream	&operator<<(std::ostream &lhs, ShrubberyCreationForm &rhs){
+	lhs << "Form " << rhs.getName() << "has been created\n";
+	return (lhs);
+}

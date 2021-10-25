@@ -14,6 +14,7 @@ RobotomyRequestForm::~RobotomyRequestForm(){
 
 void	RobotomyRequestForm::execute(Bureaucrat const & executor) const{
 	int	mystery_nbr;
+	srand(time(0));
 
 	std::cout << executor.getName() << " executs " << getName() << std::endl;
 	mystery_nbr = rand() % 100 + 1;
@@ -22,4 +23,9 @@ void	RobotomyRequestForm::execute(Bureaucrat const & executor) const{
 		std::cout << _target << " has been lobotomized" << std::endl;
 	else
 		std::cout << "The lobotomization of " << _target << " has been a fail" << std::endl;
+}
+
+std::ostream	&operator<<(std::ostream &lhs, RobotomyRequestForm &rhs){
+	lhs << "Form " << rhs.getName() << "has been created\n";
+	return (lhs);
 }

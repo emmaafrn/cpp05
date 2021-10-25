@@ -4,6 +4,10 @@ PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form(145, 1
 	_target = target;
 }
 
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& copy) : Form(145, 137, "ShrubberyCreation"){
+	_target = copy._target;
+}
+
 PresidentialPardonForm::~PresidentialPardonForm(){
 
 }
