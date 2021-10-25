@@ -14,7 +14,8 @@ RobotomyRequestForm::~RobotomyRequestForm(){
 
 void	RobotomyRequestForm::execute(Bureaucrat const & executor) const{
 	int	mystery_nbr;
-
+	srand(time(0));
+	
 	std::cout << executor.getName() << " executs " << getName() << std::endl;
 	mystery_nbr = rand() % 100 + 1;
 	std::cout << "* pierce noises *" << std::endl;
