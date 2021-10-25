@@ -22,5 +22,10 @@ int	main(){
 
 	rrf->beSigned(Joe);
 	Joe.executeForm(*rrf);
+
+	delete rrf;
+	delete ppf;
+	delete scf;
+	
 	return (0);
 }

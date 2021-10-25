@@ -13,7 +13,7 @@ std::string	_target;
 public:
 	ShrubberyCreationForm(std::string target);
 	ShrubberyCreationForm(const ShrubberyCreationForm& copy);
-	~ShrubberyCreationForm();
+	virtual ~ShrubberyCreationForm();
 	void	execute (Bureaucrat const & executor) const;
 };
 

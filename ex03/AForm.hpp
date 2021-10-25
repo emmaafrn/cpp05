@@ -16,7 +16,7 @@ const int	_exec_grade;
 public:
 	Form(const int s_core, const int e_grade, std::string name);
 	Form(const Form& copy);
-	~Form();
+	virtual ~Form();
 	std::string		getName(void) const;
 	int				getSignGrade(void) const;
 	int				getExecGrade(void) const;
